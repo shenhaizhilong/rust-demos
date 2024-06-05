@@ -15,6 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/serde_demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/sqlite/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/time_demos/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demo1/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
