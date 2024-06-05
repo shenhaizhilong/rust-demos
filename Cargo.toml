@@ -1,0 +1,33 @@
+[package]
+name = "demos"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8.5"
+futures = "0.3.29"
+#tokio = { version = "1", features = ["full"] }
+utf-8 = "0.7.6"
+
+utf8_slice = "1.0.0"
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid =  { workspace = true }
+colored = { workspace = true }
+
+[workspace]
+members = [ "src/algorithms", "src/compile_with_c", "src/compile_with_cpp","src/dna", "src/file_test", "src/hash_map_demos", "src/serde_demo", "src/sqlite", "src/time_demos", "src/vec_demos"]
+
+[workspace.dependencies]
+chrono = { version = "0.4.38", features = ["serde"] }
+reqwest = { version = "0.12.4", default-features = false, features = ["http2", "stream", "rustls-tls", "blocking"] }
+semver = { version = "1.0", features = ["serde"] }
+serde = { version = "~1.0", features = ["derive", "rc"] }
+serde_cbor = { version = "0.11.2" }
+serde_json = "~1.0"
+tar = "0.4.40"
+uuid = { version = "1.8", features = ["v4", "serde", "v7"] }
+wal = { git = "https://github.com/qdrant/wal.git", rev = "a7870900f29811a24e20882887d60e6a2febf945" }
+colored = "2.1.0"
