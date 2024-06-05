@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/hash_map_demos/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/vec_demos/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/file_test/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cmd_demos/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/compile_with_c/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/compile_with_cpp/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/serde_demo/src" isTestSource="false" />

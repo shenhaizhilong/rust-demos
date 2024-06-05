@@ -18,7 +18,7 @@ uuid =  { workspace = true }
 colored = { workspace = true }
 
 [workspace]
-members = [ "src/algorithms", "src/compile_with_c", "src/compile_with_cpp","src/dna", "src/file_test", "src/hash_map_demos", "src/serde_demo", "src/sqlite", "src/time_demos", "src/vec_demos"]
+members = [ "src/algorithms", "src/cmd_demos", "src/compile_with_c", "src/compile_with_cpp","src/dna", "src/file_test", "src/hash_map_demos", "src/serde_demo", "src/sqlite", "src/time_demos", "src/vec_demos"]
 
 [workspace.dependencies]
 chrono = { version = "0.4.38", features = ["serde"] }

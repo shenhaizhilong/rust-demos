@@ -1,0 +1,8 @@
+[package]
+name = "cmd_demos"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex = "1.10.4"
+error-chain = "0.12.4"
