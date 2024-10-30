@@ -25,13 +25,13 @@ mod tests {
                 ']' => stack.push('['),
                 ')' => stack.push('('),
                 _ => {
-                    if (stack.is_empty() || stack.pop().unwrap() != s) {
+                    if stack.is_empty() || stack.pop().unwrap() != s {
                         return false;
                     }
                 }
             }
         }
-        return stack.is_empty();
+        stack.is_empty()
     }
 
     fn is_valid2(s: String) -> bool {
