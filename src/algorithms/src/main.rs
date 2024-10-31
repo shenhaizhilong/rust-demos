@@ -7,6 +7,8 @@ mod min_bit_flips;
 mod get_lucky;
 mod find_complement;
 mod count_sub_islands;
+mod judge_SquareSum;
+mod min_operations;
 
 fn main() {
     println!("Hello, world!");
