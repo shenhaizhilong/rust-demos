@@ -69,6 +69,12 @@ mod tests {
     #[test]
     fn test_count_consistent_strings() {
         let words = vec!["a", "b", "c", "ab", "ac", "bc", "abc"].iter().map(|s| s.to_string()).collect();
+        println!("{}", count_consistent_strings("abc".to_string(), words));
+    }
+
+    #[test]
+    fn test_count_consistent_strings2() {
+        let words = vec!["a", "b", "c", "ab", "ac", "bc", "abc"].iter().map(|s| s.to_string()).collect();
         println!("{}", count_consistent_strings2("abc".to_string(), words));
     }
 }

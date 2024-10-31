@@ -54,7 +54,7 @@ pub fn min_operations(logs: Vec<String>) -> i32 {
         } else if log == "./" {
             continue;
         } else if log == "../" {
-            if (!stack.is_empty()) {
+            if !stack.is_empty() {
                 stack.pop_front();
             }
         } else {

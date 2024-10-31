@@ -7,8 +7,10 @@ mod min_bit_flips;
 mod get_lucky;
 mod find_complement;
 mod count_sub_islands;
-mod judge_SquareSum;
+mod judge_square_sum;
 mod min_operations;
+mod is_power_of_two;
+mod pascal_triangle;
 
 fn main() {
     println!("Hello, world!");

@@ -1,5 +1,3 @@
-use std::ptr::read;
-
 
 /**
 https://leetcode.com/problems/count-sub-islands/
@@ -38,7 +36,7 @@ pub fn count_sub_islands(grid1: Vec<Vec<i32>>, mut grid2: Vec<Vec<i32>>) -> i32 
     for i in 0..grid2.len() {
         for j in 0..grid2[i].len() {
             if grid2[i][j] == 1 {
-                if (dfs2(&grid1, &mut grid2, i, j)) {
+                if dfs2(&grid1, &mut grid2, i, j) {
                     ans += 1;
                 }
             }

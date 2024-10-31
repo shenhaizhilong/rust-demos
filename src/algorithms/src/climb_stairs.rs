@@ -1,4 +1,3 @@
-use std::fs::read;
 
 pub fn climb_stairs(n: i32) -> i32 {
     if n <= 1 {

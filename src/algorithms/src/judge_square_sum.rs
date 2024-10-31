@@ -24,9 +24,9 @@ pub fn judge_square_sum(c: i32) -> bool {
     let mut right = (c as f64).sqrt() as i32;
     while left <= right {
         let sum = left * left + right * right;
-        if (sum < c) {
+        if sum < c {
             left += 1;
-        } else if (sum > c) {
+        } else if sum > c {
             right -= 1;
         } else {
             return true;
