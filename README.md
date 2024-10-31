@@ -1,5 +1,6 @@
 ## Rust Learning Demos
 Rust 学习示例
+leetcode 题解
 
 ## 参考资料
 - [rust-cookbook](https://rust-lang-nursery.github.io/rust-cookbook)
