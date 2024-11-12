@@ -1,19 +1,21 @@
 #[cfg(test)]
 mod tests {
+    use std::collections::HashSet;
+
     #[test]
     fn test_1() {
         let mut v = vec![1, 2, 3, 4, 5];
-        let first = &v[0];//不可变的借用
+        let first = &v[0]; //不可变的借用
         // v.push(6);//可变的借用
-        println!("first is {}", first);//不可变的借用
+        println!("first is {}", first); //不可变的借用
     }
 
     #[test]
     fn test_2() {
         let mut v = vec![1, 2, 3, 4, 5];
-        v.push(6);//可变的借用
-        let first = &v[0];//不可变的借用
-        println!("first is {}", first);//不可变的借用
+        v.push(6); //可变的借用
+        let first = &v[0]; //不可变的借用
+        println!("first is {}", first); //不可变的借用
     }
 
     #[test]
@@ -103,6 +105,32 @@ mod tests {
         let mut vec = vec![1, 2, 3];
         assert_eq!(vec.pop(), Some(3));
         assert_eq!(vec, [1, 2]);
+    }
 
+    #[test]
+    fn test_r() {
+        let mut v = vec![1, 2, 3, 4, 5];
+        let mut ans = vec![];
+        for i in 0..v.len() {
+            if (i % 2) == 0 {
+                ans.push(v[i]);
+            }
+        }
+        println!("{:?}", ans);
+    }
+
+    #[test]
+    fn test_iter() {
+        let mut v: Vec<String> = vec!["red".into(), "blue".into(), "green".into(), "red".into()];
+        let mut s: Vec<&str> = v.clone().into_iter().map(|x| match x.as_str() {
+            "red" => "R",
+            "blue" => "B",
+            "green" => "G",
+            _ => "O",
+        }).collect::<Vec<&str>>();
+        println!("{:?}", s);
+
+        let h = v.into_iter().collect::<HashSet<String>>();
+        println!("{:?}", h);
     }
 }

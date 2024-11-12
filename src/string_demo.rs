@@ -94,6 +94,56 @@ mod tests {
         // 可以把  a[3] = 10 放到切片前或者放到打印切片s语句后面, 当切片不在使用的时候
         // a[3] = 10;
         println!("s: {s:?}");
+    }
 
+    #[test]
+    fn t10() {
+        let s1 = "hello world!";
+        println!("{s1}");
+        // 将 str 转换为 String 类型
+        let s2 = s1.to_string();
+        println!("{s2}");
+        println!("s1: {}", s1);
+    }
+
+    #[test]
+    fn t11() {
+        let string = String::from("birthday gift");
+        // Box<str>
+        let boxed_str = string.clone().into_boxed_str();
+        // Box<str> into_string()
+        assert_eq!(boxed_str.into_string(), string);
+    }
+
+    #[test]
+    fn t12() {
+        // str to Vec<char>
+        let s1 = "hello world!";
+        let chars: Vec<char> = s1.chars().collect();
+        println!("{:?}", chars);
+        // Vec<char> 切片chars[0..5]
+        // 切片转换为 String chars[0..5].into_iter().collect()
+        let s2 = chars[0..5].into_iter().collect::<String>();
+        println!("{:?}", s2);
+        println!("{:?}", chars);
+        // 切片转换为 String chars[0..5].iter().collect()
+        let s3 = chars[0..5].iter().collect::<String>();
+        println!("{:?}", s3);
+    }
+
+    #[test]
+    fn t13() {
+        let s1 = "hello world!";
+        print_chars(s1);
+        println!("{:?}", s1);
+    }
+
+    fn print_chars(s: &str) {
+        for c in s.chars() {
+            if c == 'l' {
+                break;
+            }
+            println!("{}", c);
+        }
     }
 }
